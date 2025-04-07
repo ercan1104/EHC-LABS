@@ -36,3 +36,15 @@
 ## Задание 4
 
 ![5](images/5.png)
+
+![6](images/6.png)
+
+## Анализ на Inspector
+
+### Memory problems
+
+![7](images/7.png)
+
+## Threading problens
+
+Также `No problems detected`.
