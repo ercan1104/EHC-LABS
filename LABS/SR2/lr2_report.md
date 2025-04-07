@@ -35,16 +35,18 @@
 
 ## Задание 4
 
-![5](images/5.png)
+### Анализ на Inspector
 
-![6](images/6.png)
-
-## Анализ на Inspector
-
-### Memory problems
+#### Memory problems
 
 ![7](images/7.png)
 
-## Threading problens
+#### Threading problens
 
 Также `No problems detected`.
+
+### Анализ на VTune
+
+![5](images/5.png)
+
+![6](images/6.png)
