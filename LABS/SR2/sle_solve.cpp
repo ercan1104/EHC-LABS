@@ -66,6 +66,7 @@ public:
                 coefs[i][j] = coefs[i][j] / lead_elem;
             }
             free_term[i] = free_term[i] / lead_elem;
+            #pragma omp parallel for
             for (int j = i - 1; j >= 0; --j)
             {
                 type coef = coefs[j][i] / coefs[i][i];
