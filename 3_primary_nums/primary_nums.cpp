@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
         }
     }
     int sum = 0;
+    #pragma omp parallel for schedule(dynamic) reduction(+:sum)
     for( int i = 2; i <= num ; i++ )
     {
         sum += isprime ( i );

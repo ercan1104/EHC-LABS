@@ -1,3 +1,4 @@
+#include "D:\\Program Files\\oneAPI\\advisor\\2023.2.0\\include\\advisor-annotate.h"
 #include <vector>
 #include <iostream>
 #include <random>
@@ -43,6 +44,7 @@ public:
                 coefs[i][j] = coefs[i][j] / lead_elem;
             }
             free_term[i] = free_term[i] / lead_elem;
+            #pragma omp parallel for
             for (int j = i + 1; j < m; ++j)
             {
                 type coef = coefs[j][i] / coefs[i][i];
@@ -156,7 +158,7 @@ bool performance_run(int task_size)
 
 int main(int argc, char **argv)
 {
-    int task_size = 100;
+    int task_size = 1000;
 
     if (argc > 1)
     {
