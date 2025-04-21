@@ -1,3 +1,4 @@
+#include "D:\\Program Files\\oneAPI\\advisor\\2023.2.0\\include\\advisor-annotate.h"
 #include <cstdlib>
 #include <iostream>
 #include <vector>
@@ -70,9 +71,11 @@ public:
         for (int iter = 0; iter < m_num_verts - 2; ++iter) {
             for(size_t i = 0; i < m_num_verts; ++i) {
                 for(size_t j = 0; j < m_num_verts; ++j) {
+                    #pragma omp for schedule(static) ordered
                     for(size_t k = 0; k < m_num_verts; ++k) {
                         uint64_t tmp_dist = res_graph.m_adj_matr[i][k] + m_adj_matr[k][j];
                         if (res_graph.m_adj_matr[i][j] > tmp_dist) {
+                            #pragma omp ordered
                             res_graph.m_adj_matr[i][j] = tmp_dist;
                         }
                     }

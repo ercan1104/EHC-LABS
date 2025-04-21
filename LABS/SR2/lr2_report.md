@@ -31,8 +31,6 @@
 
 ![3](images/3.png)
 
-![4](images/4.png)
-
 ## Задание 4
 
 ### Анализ на Inspector
